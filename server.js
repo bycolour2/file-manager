@@ -217,14 +217,6 @@ app.get("/api/description", async (req, res) => {
     } catch (error) {
       // Файл может не существовать
     }
-    console.log("🚀 ~ descriptions:", descriptions);
-    console.log("🚀 ~ filePath:", filePath);
-    console.log(
-      "🚀 ~ descriptions:",
-      filePath
-        ? {description: descriptions[filePath] || ""}
-        : {description: descriptions}
-    );
 
     res.json(
       filePath

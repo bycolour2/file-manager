@@ -364,7 +364,6 @@ class FileManager {
   }
 
   renderFolder(folder, parent, level) {
-    console.log("cache:", this.folderCache);
     const folderElement = document.createElement("div");
     folderElement.className = "folder";
     folderElement.style.setProperty("--pl", `${20 + level * 24}px`);
