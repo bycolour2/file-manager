@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Файловый менеджер</title>
+    <link rel="stylesheet" href="./prism/prism-tomorrow-night.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- <header class="header">
+        <h1>Файловый менеджер</h1>
+      </header> -->
+
+      <main class="main-content">
+        <div class="main-content-actions">
+          <button id="create-folder-btn" class="btn">Создать папку</button>
+          <button id="upload-file-btn" class="btn">Загрузить файл</button>
+          <button id="rename-item-btn" class="btn" style="display: none">
+            Переименовать
+          </button>
+          <button
+            id="delete-item-btn"
+            class="btn btn-danger"
+            style="display: none"
+          >
+            Удалить
+          </button>
+        </div>
+
+        <div class="main-content-container">
+          <aside class="sidebar">
+            <div class="tree-header">
+              <h3>Дерево файлов</h3>
+              <button id="refresh-tree-btn" class="btn-icon" title="Обновить">
+                🔄
+              </button>
+            </div>
+            <div id="file-tree" class="file-tree">
+              <div class="loading">Загрузка...</div>
+            </div>
+          </aside>
+
+          <section class="content-area">
+            <div class="tabs-container">
+              <div class="file-tabs">
+                <div class="tab-list" id="file-tabs-list">
+                  <div class="empty-tab">Выберите файл для редактирования</div>
+                </div>
+              </div>
+
+              <div class="editor-container">
+                <div class="editor-header">
+                  <div class="editor-info">
+                    <h3 id="editor-title">Редактор</h3>
+                  </div>
+                  <div class="editor-actions">
+                    <button
+                      id="save-description-btn"
+                      class="btn btn-primary"
+                      style="display: none"
+                    >
+                      Сохранить описание
+                    </button>
+                    <button
+                      id="download-file-btn"
+                      class="btn btn-secondary"
+                      style="display: none"
+                    >
+                      Скачать
+                    </button>
+                  </div>
+                </div>
+
+                <div class="file-info">
+                  <div class="info-row">
+                    <label for="file-description">Описание:</label>
+                    <input
+                      type="text"
+                      id="file-description"
+                      placeholder="Введите описание файла..."
+                    />
+                  </div>
+                </div>
+
+                <div class="editor-content">
+                  <pre><code id="code-content" class="language-js">Выберите файл для просмотра содержимого</code></pre>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <!-- Модальные окна -->
+    <div id="create-folder-modal" class="modal">
+      <div class="modal-content">
+        <h3>Создать новую папку</h3>
+        <input
+          type="text"
+          id="folder-name-input"
+          placeholder="Введите имя папки"
+        />
+        <div class="modal-actions">
+          <button id="confirm-create-folder" class="btn btn-primary">
+            Создать
+          </button>
+          <button id="cancel-create-folder" class="btn btn-secondary">
+            Отмена
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="rename-modal" class="modal">
+      <div class="modal-content">
+        <h3>Переименовать</h3>
+        <input type="text" id="rename-input" placeholder="Введите новое имя" />
+        <div class="modal-actions">
+          <button id="confirm-rename" class="btn btn-primary">
+            Переименовать
+          </button>
+          <button id="cancel-rename" class="btn btn-secondary">Отмена</button>
+        </div>
+      </div>
+    </div>
+
+    <input type="file" id="file-input" style="display: none" multiple />
+
+    <script src="./prism/prism-tomorrow-night.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

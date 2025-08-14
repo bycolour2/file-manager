@@ -1,0 +1,79 @@
+# === ОС и IDE ===
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# IDE и редакторы
+.idea/
+.vscode/
+*.code-workspace
+
+# === Node.js ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# === Сборка и артефакты ===
+dist/
+build/
+out/
+.next/
+.nuxt/
+.svelte-kit/
+coverage/
+storybook-static/
+
+# === TypeScript ===
+*.tsbuildinfo
+
+# === Тесты ===
+coverage/
+*.lcov
+
+# === Кэш ===
+.cache/
+.nyc_output/
+tmp/
+temp/
+
+# === Докер ===
+docker-data/
+.docker/
+
+# === Локальные env ===
+.env
+.env.*
+!.env.example
+
+# === OS Trash ===
+.trash/
+$RECYCLE.BIN/
+
+# === Фото, видео и большие файлы (если не нужны в репо) ===
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# === Прочее ===
+*.bak
+*.backup
+*.old
+logs.txt
+files/*
